@@ -1,8 +1,11 @@
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 
-
-#if os(iOS) || os(tvOS)
 import UIKit
-
 public extension UICollectionView {
     
     func reload<T: DiffAware>(
@@ -10,9 +13,7 @@ public extension UICollectionView {
         section: Int = 0,
         updateData: () -> Void,
         completion: ((Bool) -> Void)? = nil) {
-            
             let changesWithIndexPath = IndexPathConverter().convert(changes: changes, section: section)
-            
             performBatchUpdates({
                 updateData()
                 insideUpdate(changesWithIndexPath: changesWithIndexPath)
@@ -48,4 +49,3 @@ public extension UICollectionView {
         }
     }
 }
-#endif

@@ -1,4 +1,9 @@
-
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 import Foundation
 
 public protocol DiffAware {
@@ -22,4 +27,3 @@ extension Int: DiffAware {}
 extension String: DiffAware {}
 extension Character: DiffAware {}
 extension UUID: DiffAware {}
-

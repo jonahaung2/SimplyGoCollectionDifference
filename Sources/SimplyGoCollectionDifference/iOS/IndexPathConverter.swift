@@ -1,5 +1,10 @@
 
-#if os(iOS) || os(tvOS)
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 import Foundation
 
 public struct ChangeWithIndexPath {
@@ -47,9 +52,7 @@ public class IndexPathConverter {
 }
 
 extension Int {
-    
     fileprivate func toIndexPath(section: Int) -> IndexPath {
         return IndexPath(item: self, section: section)
     }
 }
-#endif

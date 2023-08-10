@@ -1,7 +1,13 @@
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 
 import Foundation
 
-public final class WagnerFischer<T: DiffAware> {
+internal final class WagnerFischer<T: DiffAware> {
     private let reduceMove: Bool
     
     public init(reduceMove: Bool = false) {
@@ -13,7 +19,7 @@ public final class WagnerFischer<T: DiffAware> {
         previousRow.seed(with: new)
         let currentRow = Row<T>()
         
-        if let changes = preprocess(old: old, new: new) {
+        if let changes = SimplyGoCollectionDifference.preprocess(old: old, new: new) {
             return changes
         }
         

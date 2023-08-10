@@ -1,5 +1,10 @@
 
-
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 import Foundation
 
 public struct Insert<T> {

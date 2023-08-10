@@ -1,7 +1,12 @@
-
+//
+//  MainQueue+Synchronous.swift
+//  Msgr
+//
+//  Created by Aung Ko Min on 12/10/22.
+//
 import Foundation
 
-struct MoveReducer<T: DiffAware> {
+internal struct MoveReducer<T: DiffAware> {
     func reduce(changes: [Change<T>]) -> [Change<T>] {
         let compareContentWithOptional: (T?, T) -> Bool = { a, b in
             guard let a = a else {
